@@ -1,62 +1,102 @@
-* {
-    margin: 0;
-}
-/* The first body is describing the GENERAL THEME in the file. Only thing that will overwrite are the media queries further down. From 0 - 768px */
+/* Selector --> all body elements */
 
 body {
-    background: rgba(255, 0, 0, .25);
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0px;
+    margin: 0px;
 }
 
-header {
-    background: rgba(0, 0, 0, .25);
-    margin-bottom: 10px;
-    height: 50px;
+
+/* Selector --> Class */
+
+.nav {
+    background-color: cadetblue;
+    color: white;
 }
 
-section {
-    background: rgba(0, 0, 0, .25);
-    margin-bottom: 10px;
-    height: 1000px;
+
+/* Selector --> Parent --> Child */
+
+.nav ul {
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+    font-size: 0px;
 }
 
-aside {
-    background: rgba(0, 0, 0, .25);
-    margin-bottom: 10px;
-    height: 1000px;
-    display: none;
+
+/* Selector --> Parent --> Child --> Individual */
+
+.nav ul li {
+    padding: 16px;
+    text-align: center;
+    font-size: 1.2rem;
+    border-bottom: 1px solid black;
+    transition: background-color 0.2s;
 }
 
-footer {
-    background: rgba(0, 0, 0, .25);
-    margin-bottom: 10px;
-    height: 25px;
-}
-/* Applies only to tablet devices (or screen resolutions above 768px - 1200px) */
 
-@media screen and (min-width: 768px) {
-    body {
-        background: rgba(0, 255, 0, .25);
+/* Selector --> Pseudo selectors */
+
+.nav ul li:hover {
+    background-color: black;
+}
+
+.image-area {
+    background-image: url('images/background.png');
+    background-color: black;
+    background-position: center center;
+    background-size: cover;
+    padding-top: 200px;
+    padding-bottom: 200px;
+}
+
+.centered-container {
+    /* can also be auto*/
+    max-width: 1020px;
+    margin: 0px auto;
+    padding: 0px 16px;
+}
+
+.image-text {
+    text-align: center;
+    background-color: black;
+    color: white;
+    font-size: 2.5rem;
+}
+
+.intro-text {
+    color: gray;
+    font-size: 1.5rem;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.single-service {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.single-service p {
+    padding: 0px 16px;
+}
+
+@media screen and (min-width: 700px) {
+    .nav ul {
+        text-align: right;
     }
-    aside {
-        display: block;
+    .nav ul li {
+        display: inline-block;
+        border-bottom: 0px;
+        border-left: 1px solid black;
+        text-align: left;
     }
-}
-/* Applies only to desktop devices (or screen resolutions above 1200px - ***) */
-
-@media screen and (min-width: 1200px) {
-    body {
-        background: rgba(0, 0, 255, .25);
-    }
-    section {
+    .single-service {
+        width: 50%;
         float: left;
-        width: 69%;
-        margin-right: 10px;
-    }
-    aside {
-        float: right;
-        width: 30%;
-    }
-    footer {
-        clear: both;
     }
 }
