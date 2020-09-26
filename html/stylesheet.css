@@ -13,8 +13,8 @@ body {
 /* Selector --> Class */
 
 .nav {
-    background-color: cadetblue;
-    color: white;
+    background-color: white;
+    color: black;
 }
 
 
@@ -47,7 +47,7 @@ body {
 
 .image-area {
     background-image: url('images/background.png');
-    background-color: black;
+    background-color: white;
     background-position: center center;
     background-size: cover;
     padding-top: 200px;
